@@ -3,7 +3,7 @@ name: "Nabeel Chowdhury"
 nickname: "Nabeel"
 # greeting message before your name. it will default to "Hi! I am" if not provided
 greeting: "Hi, I am"
-image: "images/author/nabeel.jpg"
+image: "images/author/Nabeel.jpg"
 # give your some contact information. they will be used in the footer
 contactInfo:
   #email: "nabeel.chowdhury@case.edu"
