@@ -1,0 +1,38 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+degrees:
+- name: Ph.D in Biomedical Engineering
+  icon: fa-microscope
+  timeframe: 2017-Present
+  institution:
+    name: Case Western Reserve University
+    url: "https://case.edu/"
+  grade: #(optional)
+    scale: GPA
+    achieved: 4.0
+    outOf: 4.0
+  publications: #(optional)
+  - title: The Utilzation of Peripheral Nerve Feedback at a Preconscious Level (In Progress)
+    url: "https://osf.io/vq5sh/"
+- name: B.S. in Biomedical Engineering
+  icon: fa-graduation-cap
+  timeframe: 2012-2016
+  institution:
+    name: Washington University in St. Louis
+    url: "https://wustl.edu/"
+  grade: #(optional)
+    scale: GPA
+    achieved: 3.5
+    outOf: 4
+  publications: #(optional)
+  - title: Evaluation of absorbable mesh fixation devices at various deployment angles
+    url: "https://link.springer.com/article/10.1007/s00464-014-3850-x"
