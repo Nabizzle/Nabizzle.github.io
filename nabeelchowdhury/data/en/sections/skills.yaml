@@ -11,16 +11,40 @@ section:
 # Your Skills.
 # Give a summary of you each skill in the summary section.
 skills:
-- name: Kubernetes
-  logo: "/images/sections/skills/kubernetes.png"
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
-  url: "https://kubernetes.io/"
 
-- name: Go Development
-  logo: "/images/sections/skills/go.png"
-  summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
-  url: "https://golang.org/"
+- name: Git
+  logo: /images/sections/skills/git.png
+  summary: "Experienced with git-based development. Mostly, use Github and Bitbucket. Experienced in managing a small team's version control."
+  url: "https://git-scm.com/"
 
-- name: Cloud Computing
-  logo: "/images/sections/skills/cloud.png"
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+- name: C++
+  logo: /images/sections/skills/c++.png
+  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
+
+- name: Python
+  logo: /images/sections/skills/python.png
+  summary: "Have intermediate python skills of data analysis and machine learning."
+
+- name: Matlab
+  logo: /images/sections/skills/matlab.jpg
+  summary: "Have advanced understanding of Matlab for data manipulation and connection to Neural Stimulators."
+
+- name: Eagle
+  logo: /images/sections/skills/Eagle.jpg
+  summary: "Ability to make basic printed circuit boards."
+
+- name: Solidworks
+  logo: /images/sections/skills/solidworks.jpg
+  summary: "Experienced in making and 3D printing models."
+
+- name: Blender
+  logo: /images/sections/skills/blender.png
+  summary: "Several years of experience using blender for medical modeling and freelance 3D modeling."
+
+- name: Zbrush
+  logo: /images/sections/skills/Zbrush.png
+  summary: "Used Zbrush for several years for digital sculpting."
+
+- name: LaTeX
+  logo: /images/sections/skills/latex.png
+  summary: "Experienced with making documents and custom figures with LaTeX."
