@@ -58,7 +58,7 @@ badges:
   color: yellow
 
 - type: soft-skill-indicator
-  name: Team Management
+  name: Management
   percentage: 100
   color: orange
 
