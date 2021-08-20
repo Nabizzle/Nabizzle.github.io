@@ -48,23 +48,23 @@ socialLinks:
 # You can also show a circular bar indicating the level of expertise on a certain skill
 badges:
 - type: soft-skill-indicator
-  name: Leadership
-  percentage: 85
+  name: Neural Interfaces
+  percentage: 90
   color: blue
 
 - type: soft-skill-indicator
-  name: Team Work
-  percentage: 100
+  name: Circuit Design
+  percentage: 85
   color: yellow
 
 - type: soft-skill-indicator
-  name: Hard Working
-  percentage: 85
+  name: Team Management
+  percentage: 100
   color: orange
 
 - type: soft-skill-indicator
   name: Neuroscience
-  percentage: 85
+  percentage: 90
   color: green
 
 - type: soft-skill-indicator

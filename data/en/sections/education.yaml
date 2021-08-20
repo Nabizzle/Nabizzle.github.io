@@ -23,6 +23,23 @@ degrees:
   publications: #(optional)
   - title: The Utilzation of Peripheral Nerve Feedback at a Preconscious Level (In Progress)
     url: "https://osf.io/vq5sh/"
+  takenCourses: #(optional)
+    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+    showGrades: false
+    courses:
+    - name: Bioelectric Phenomina
+      achieved: 4.0
+      outOf: 4
+    - name: Neural Interfaces
+      achieved: 4.0
+      outOf: 4
+    - name: Computational Neuroscience
+      achieved: 4.0
+      outOf: 4
+    - name: Applied Statistics for Engineers
+      achieved: 4.0
+      outOf: 4
+
 - name: B.S. in Biomedical Engineering
   icon: fa-graduation-cap
   timeframe: 2012-2016
