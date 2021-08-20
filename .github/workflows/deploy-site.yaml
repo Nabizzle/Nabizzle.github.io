@@ -4,7 +4,7 @@ name: Deploy to Github Pages
 on:
   push:
     branches:
-    - source
+      - source
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.85.0'
+          hugo-version: 'latest'
           extended: true
 
       # build website
