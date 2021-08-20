@@ -5,3 +5,5 @@ section:
   enable: true
   weight: 5
   showOnNavbar: true
+  hideTitle: true # Can optionally hide the title in sections (default: false)
+  numShow: 1 # Can optionally increase the number of posts to display (default: 3)
