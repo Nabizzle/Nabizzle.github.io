@@ -11,32 +11,67 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: Example Co.
-    url: "https://www.example.com"
-    location: Dhaka Branch
+    name: Case Western Reserve University
+    url: "https://engineering.case.edu/ebme/tyler"
+    location: Cleveland, Ohio
     # company overview
-    overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+    overview: CWRU has arguably the best neuroengineering department in the country and a world class faculty at the cutting edge of the neuro technology space.
   positions:
-  - designation: Senior Software Engineer
-    start: Nov 2019
+  - designation: Neuroengineering PhD Student
+    start: Aug 2017
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
+    - Investigate how artificial stimulation of the peripheral nervous system integrates with the motor control system of amputees
+    - Senior graduate student of the Tyler lab.
+    - Manage code version control of the lab.
+    - Mentor incoming PhD students
+    - Present at CWRU and at academic conferences
+    - Work with and manage Human subjects with neural implants.
 
 - company:
-    name: PreExample Co.
-    url: "https://www.preexample.com"
-    location: Nowhere
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+    name: Shirley Ryan Ability Lab (Center for Bionic Medicine)
+    url: "https://www.sralab.org/"
+    location: Chicago, Illinois
+    overview: The Shirley Ryan Ability lab is the number one rehab hospital in the country and Todd Kuiken of the Center for Bionic Medicine pioneered Targeted Muscle Reinnervation, a technique that revolutionized prosthesis control.
   positions:
-  - designation: Software Engineer
-    start: March 2016
-    end: May 2017
+  - designation: Research Assistant
+    start: Jun 2016
+    end: Aug 2017
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
+    - Work with a multidisplinary team of engineers
+    - Construct cabling and equipment for experiments
+    - Work with transtibial amputees developing better EMG controllers.
+    - Help PhD students with thier experiments
+
+- company:
+    name: Freelance 3D Modeler
+    url: "https://www.fiverr.com/"
+    location: Home
+    overview: Worked as a freelance 3D artist on the side.
+  positions:
+  - designation: 3D artist
+    start: Jun 2016
+    end: Aug 2017
+    responsibilities:
+    - Creation of requested 3D models
+    - 3D sculpting
+    - Creation of 3D printable files
+    - Worked with clients to achieve their desired results
+
+- company:
+    name: Washington University in St. Louis School of Medicine
+    url: "https://wuimis.wustl.edu/"
+    location: St. Louis, Missouri
+    overview: The Washington University in St. Louis School of Medicine is one of the best medical schools in the country and undergraduate BME program where I earned my BS world class.
+  positions:
+  - designation: Research Assistant
+    start: Sept 2012
+    end: May 2016
+    responsibilities:
+    - Creation of electrospun hernia meshes
+    - Design of 3D printable surgical planning devices from MRI and CT scans
+    - Repair of digital craniofacial models
+    - 3D modeler for a startup 3D printing core
+    - Design of 3D printable prostheses
