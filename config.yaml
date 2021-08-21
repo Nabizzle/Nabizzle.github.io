@@ -31,7 +31,7 @@ params:
   logo:
     main: images/home/main-logo.png
     inverted: images/home/inverted-logo.png
-    favicon: images/home/favicon.png
+    favicon: images/home/favicon.svg
 
   # GitHub repo URL of your site
   gitRepo: https://github.com/Nabizzle/nabeelchowdhury.github.io
