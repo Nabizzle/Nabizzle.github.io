@@ -47,27 +47,47 @@ socialLinks:
 # You can show your verifiable certificates from https://www.credly.com.
 # You can also show a circular bar indicating the level of expertise on a certain skill
 badges:
+- type: certification
+  name: Data Science Foundations - Level 2 (V2)
+  url: "https://www.credly.com/badges/7ec06df5-0e41-44cd-84b3-a9afda728780/public_url"
+  badge: "https://images.credly.com/size/340x340/images/d7321425-c989-4bf9-846a-cd2a647d213b/Data_Sci_Foundations_Level_2_-_CC_-_2019.png"
+
+- type: certification
+  name: Applied Data Science with Python - Level 2
+  url: "https://www.credly.com/badges/9a7875be-7cae-4194-9553-cc74a30766e9/public_url"
+  badge: "https://images.credly.com/size/340x340/images/73ac7b07-679c-4c0e-94d9-8b9dc11efe59/Applied_Data_Science_with_Python.png"
+
+- type: certification
+  name: Deep Learning
+  url: "https://www.credly.com/badges/2aafad2b-e540-4596-abfa-ab4379881639/public_url"
+  badge: "https://images.credly.com/size/340x340/images/747c6cdd-e728-446a-8e32-bbfb58fc04c7/Deep_Learning_-_Knowledge_2_Stars.png"
+
+- type: certification
+  name: R Essentials
+  url: "https://www.credly.com/badges/e893a846-e2f9-4a95-90ff-549a79cc2d27/public_url"
+  badge: "https://images.credly.com/size/340x340/images/d2cc88b1-1f59-41d2-9f1c-83190e3541e1/R_Essentials.png"
+
 - type: soft-skill-indicator
   name: Neural Interfaces
-  percentage: 90
+  percentage: 100
   color: blue
 
 - type: soft-skill-indicator
-  name: Circuit Design
-  percentage: 85
-  color: yellow
-
-- type: soft-skill-indicator
-  name: Management
-  percentage: 100
-  color: orange
-
-- type: soft-skill-indicator
   name: Neuroscience
-  percentage: 90
+  percentage: 100
   color: green
 
 - type: soft-skill-indicator
   name: Programming
-  percentage: 80
+  percentage: 100
   color: pink
+
+- type: soft-skill-indicator
+  name: Circuit Design
+  percentage: 100
+  color: yellow
+
+- type: soft-skill-indicator
+  name: Team Work
+  percentage: 100
+  color: orange
