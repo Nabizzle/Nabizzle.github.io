@@ -1,0 +1,205 @@
+<!doctype html><html>
+<head>
+<title>Why Use Git?</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
+<link rel=icon type=image/png href=/images/home/favicon.svg>
+<meta property="og:title" content="Why Use Git?">
+<meta property="og:description" content="Who Uses Git? Git is a common version control system used in academia and industry to keep track of changes to code either when working individually or on a team. The power of git is its use of a centralized repository that is the main, ground truth of the code and individuals can pull their code from this central repository to make changes and push their local changes to this central repository.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nabizzle.github.io/posts/coding/git-and-github/why-use-git/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-08-25T22:48:45-04:00">
+<meta property="article:modified_time" content="2021-08-25T22:48:45-04:00">
+<meta name=description content="Why Use Git?">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
+<link rel=stylesheet href=/css/layouts/single.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/>
+<img src=/images/home/main-logo_hua62c9ef28b919caa4cca4d9a1b90cd05_29918_42x0_resize_box_3.png alt=Logo>
+Nabeel Chowdhury</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+</ul>
+</div>
+</div>
+<img src=/images/home/main-logo_hua62c9ef28b919caa4cca4d9a1b90cd05_29918_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/home/inverted-logo_hu7cb0ce887dfdf4dc0ce8aab85583bfee_7384_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/search>
+<input type=text name=keyword placeholder=Search data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
+<div class=subtree>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/posts/coding/>Coding</a>
+<ul class=active>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/posts/coding/git-and-github/>Git and Github</a>
+<ul class=active>
+<li><a class=active href=/posts/coding/git-and-github/why-use-git/ title="Why Use Git">Why Use Git</a></li>
+<li><a href=/posts/coding/git-and-github/setting-up-git/setting-up-git/ title="Set Up Git">Set Up Git</a></li>
+<li><a href=/posts/coding/git-and-github/create-ssh.key/create-ssh-key/ title="Create SSH Key">Create SSH Key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class=content>
+<div class="container p-0 read-area">
+<div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://nabizzle.github.io/posts/coding/git-and-github/why-use-git/git-image.jpg)>
+</div>
+<div class=page-content>
+<div class="author-profile ml-auto align-self-lg-center">
+<img class=rounded-circle src=/images/author/Nabeel_hu1af93caabd39a9120d5f2a87d3b1f53e_122345_120x120_fit_q75_box.jpg alt="Author Image">
+<h5 class=author-name>Nabeel Chowdhury</h5>
+<p>August 25, 2021</p>
+</div>
+<div class=title>
+<h1>Why Use Git?</h1>
+</div>
+<div class=post-content id=post-content>
+<h1 id=who-uses-git>Who Uses Git?</h1>
+<p>Git is a common version control system used in academia and industry to keep track of changes to code either when working individually or on a team. The power of git is its use of a centralized repository that is the main, ground truth of the code and individuals can pull their code from this central repository to make changes and push their local changes to this central repository.</p>
+<p align=center>
+<img height=300 src=repositories.svg>
+</p>
+<h1 id=how-does-git-work>How Does Git Work?</h1>
+<p>Git tracks all of the changes to a set of code in &ldquo;commits&rdquo;. Commits are essentially points in time where you wanted to save the changes you have made. These commits are recorded as a history where you can go back to any of the times you committed changes. You can also have a branching commit history if you want to try multiple things at once or add features to your code without affecting the main code you want to use day to day. Different teams can also work on different features or fixes to the main code and merge it all back together for the production ready code. You can also &ldquo;tag&rdquo; specific points in your code as important releases that you can go back to if new features are not working. Saving changes like this instead of as multiple files allows for cleaner code and a much easier way to document how your code was made when passing it on to someone else.</p>
+<p align=center>
+<img height=300 src=commit-history.svg>
+</p>
+<h1 id=where-does-the-central-repository-go>Where Does the Central Repository Go?</h1>
+<p>You can set a hard drive as a central repository, but that can be difficult for a team to use especially when remote. For this reason, most people use repository hosting websites. One of the most used repository hosting sites is GitHub. In fact, the code that generates this website is stored on GitHub. It is popular due to its robust toolset, the fact that it is free, and you can host private repsoitories of your code for free. I would also encourage you to sync between multiple repositories just in case GitHub goes down one day and especially if you need to back up your code in other areas than your hard drive. My personal method is using GitHub, Bitbucket, and an external hard drive as three central repositories with identical copies of the same code I am working on. I will go over how to set up a command that will push code to multiple repositories simultaneously in a later post.</p>
+<p align=center>
+<img height=400 src=remote-repos.svg>
+</p>
+<h1 id=how-do-you-use-git>How Do You Use Git?</h1>
+<p>There are two main methods of using git, through the command line and from a desktop GUI. Both have their merits and I will go over them in some more detail in their own sections. My personal preference is the command line as it gives me much more control over what I am doing, but it does also require more memorization of commands. Desktop GUIs are much easier to use when making small changes and pushing those changes to your central repository, but making custom commands to take care of larger and more common tasks is not as easy. Finally, regardless of how small you think your code is, it is always a good idea to track your changes with git from the beginning. You never know when someone else will need part of the code you made or if you will need to go back to a specific point in time before you made a change.</p>
+<h1 id=learning-to-use-git>Learning to Use Git</h1>
+<p>A basic graphical walkthrough is located at <a href=https://learngitbranching.js.org/>Learn Git Branching</a> Learn Git Branching is especially helpful as it walks you through how all of the basics work and gives you a visual example of what the commands are doing in the code history. The <a href=https://git-scm.com/book/en/v2>git handbook</a> is also a good resource for learning how git works and the commands you can use, but it does go into much more detail than you will likely need. <a href=https://guides.github.com/introduction/git-handbook/>GitHub</a> and <a href=https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud>Bitbucket</a> have much simpler guides that I would suggest as well.</p>
+</div>
+<div class=btn-improve-page>
+<a href=https://github.com/Nabizzle/nabeelchowdhury.github.io/edit//content/posts/coding/git-and-github/why-use-git/index.md title="Improve this page" target=_blank rel=noopener>
+<i class="fas fa-code-branch"></i>
+Improve this page
+</a>
+</div>
+<hr>
+<div class="row next-prev-navigator">
+<div class="col-md-12 next-article">
+<a href=/posts/coding/git-and-github/setting-up-git/setting-up-git/ title="Setting Up Git" class="btn btn-outline-info">
+<div>Next <i class="fas fa-chevron-circle-right"></i></div>
+<div class=next-prev-text>Setting Up Git</div>
+</a>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a>
+</section>
+<section class=toc-section id=toc-section>
+<div class=toc-holder>
+<h5 class="text-center pl-3">Table of Contents</h5>
+<hr>
+<div class=toc>
+<nav id=TableOfContents></nav>
+</div>
+</div>
+</section>
+</div>
+<footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+<ul>
+<li class=nav-item>
+<a class=smooth-scroll href=/#about>About</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#skills>Skills</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#experiences>Experiences</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#education>Education</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#projects>Projects</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#recent-posts>Recent Posts</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><span>Email: </span> <span>nblchowdhury@gmail.com</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2021 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>Notes</title>
+<title>Coding</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
@@ -12,13 +12,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
 <link rel=icon type=image/png href=/images/home/favicon.svg>
-<meta property="og:title" content="Notes">
+<meta property="og:title" content="Coding">
 <meta property="og:description" content>
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://nabizzle.github.io/notes/">
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
-<link rel=stylesheet href=/css/layouts/notes.css>
+<meta property="og:url" content="https://nabizzle.github.io/posts/coding/">
+<link rel=stylesheet href=/css/layouts/list.css>
 <link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
 </head>
 <body data-spy=scroll data-target=#TableOfContents data-offset=80>
 <div class="container-fluid bg-dimmed wrapper">
@@ -49,8 +49,21 @@ Nabeel Chowdhury</a>
 </form>
 <div class=sidebar-tree>
 <ul class=tree id=tree>
-<li id=list-heading><a href=/notes data-filter=all>Notes</a></li>
+<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
 <div class=subtree>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/posts/coding/>Coding</a>
+<ul class=active>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/posts/coding/git-and-github/>Git and Github</a>
+<ul>
+<li><a href=/posts/coding/git-and-github/why-use-git/ title="Why Use Git">Why Use Git</a></li>
+<li><a href=/posts/coding/git-and-github/setting-up-git/setting-up-git/ title="Set Up Git">Set Up Git</a></li>
+<li><a href=/posts/coding/git-and-github/create-ssh.key/create-ssh-key/ title="Create SSH Key">Create SSH Key</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </div>
 </ul>
 </div>
@@ -59,29 +72,60 @@ Nabeel Chowdhury</a>
 </section>
 <section class=content-section id=content-section>
 <div class="content container-fluid" id=content>
-<div class="container-fluid note-card-holder" id=note-card-holder>
+<div class="container-fluid post-card-holder" id=post-card-holder>
+<div class=post-card>
+<a href=/posts/coding/git-and-github/why-use-git/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/posts/coding/git-and-github/why-use-git/git-image.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Why Use Git?</h5>
+<p class="card-text post-summary">Who Uses Git? Git is a common version control system used in academia and industry to keep track of changes to code either when working individually or on a team. The power of git is its use of a centralized repository that is the main, ground truth of the code and individuals can pull their code from this central repository to make changes and push their local changes to this central repository.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>August 25, 2021</span>
+<a href=/posts/coding/git-and-github/why-use-git/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/coding/git-and-github/create-ssh.key/create-ssh-key/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Create SSH Key</h5>
+<p class="card-text post-summary">Comming Soon </p>
+</div>
+<div class=card-footer>
+<span class=float-left>August 25, 2021</span>
+<a href=/posts/coding/git-and-github/create-ssh.key/create-ssh-key/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/coding/git-and-github/setting-up-git/setting-up-git/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Setting Up Git</h5>
+<p class="card-text post-summary">Comming Soon </p>
+</div>
+<div class=card-footer>
+<span class=float-left>August 25, 2021</span>
+<a href=/posts/coding/git-and-github/setting-up-git/setting-up-git/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
 </div>
 <div class=paginator>
-<ul class="pagination pagination-default">
-<li class="page-item disabled">
-<a href=# aria-disabled=true aria-label=First class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;&#171;</span></a>
-</li>
-<li class="page-item disabled">
-<a href=# aria-disabled=true aria-label=Previous class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;</span></a>
-</li>
-<li class="page-item active">
-<a href=# aria-current=page aria-label="Page 1" class=page-link role=button>1</a>
-</li>
-<li class=page-item>
-<a href=/notes/page/2/ aria-label="Page 2" class=page-link role=button>2</a>
-</li>
-<li class=page-item>
-<a href=/notes/page/2/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
-</li>
-<li class=page-item>
-<a href=/notes/page/2/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
-</li>
-</ul>
 </div>
 </div>
 </section>
@@ -144,9 +188,6 @@ Toha
 <script type=text/javascript src=/js/navbar.js></script>
 <script type=text/javascript src=/js/plyr.js></script>
 <script type=text/javascript src=/js/main.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
-<script src=/js/imagesloaded.pkgd.min.js></script>
-<script src=/js/note.js></script>
-<script>hljs.initHighlightingOnLoad()</script>
+<script src=/js/list.js></script>
 </body>
 </html>
