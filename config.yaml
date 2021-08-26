@@ -17,7 +17,7 @@ markup:
     startLevel: 2
     endLevel: 6
     ordered: false
-    
+
   goldmark:
     renderer:
       unsafe: true
@@ -38,7 +38,7 @@ params:
     favicon: images/home/favicon.svg
 
   # GitHub repo URL of your site
-  gitRepo: https://github.com/Nabizzle/nabeelchowdhury.github.io
+  gitRepo: https://github.com/Nabizzle/Nabizzle.github.io
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
