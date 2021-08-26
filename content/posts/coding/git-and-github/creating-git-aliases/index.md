@@ -13,6 +13,7 @@ menu:
 ### What are Git Aliases?
 Git aliases, just like SSH aliases I posted about previously or any other aliases are meant to create shortened versions of commands for long or commonly used commands. Many of the aliases below are common and are listed [here](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases). Below are the aliases I use day to day.
 
+### Creating Git Aliases
 All calls to create an alias starts with the following command `git config –global alias.` where the shortened command follows the period and then the command to replace follows that after a space. The command is in single quotes. Replace the `--global` flag with `--local` if you want to make aliases for only a local repository.
 
 These are the aliases I use. The format is the alias followed by the command it replaces
