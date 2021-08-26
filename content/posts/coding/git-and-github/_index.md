@@ -1,8 +1,8 @@
 ---
-title: Git and Github
+title: Getting Started with Git
 menu:
   sidebar:
-    name: Git and Github
+    name: Getting Started with Git
     identifier: git-and-github
     parent: coding
     weight: 300
