@@ -1,0 +1,307 @@
+<!doctype html><html>
+<head>
+<title>Create an SSH Key</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
+<link rel=icon type=image/png href=/images/home/favicon.svg>
+<meta property="og:title" content="Create an SSH Key">
+<meta property="og:description" content="Why Use an SSH Key? Without an SSH key, you have to log in and enter a password each time you push changes to GitHub. An SSH key allows you to use a password that you can add to your ssh environment that you only need to enter once when you open the terminal. An SSH key creates a private key on your computer that encripts your commits that are pushed to an online repository.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nabizzle.github.io/posts/coding/git-and-github/create-ssh.key/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-08-26T10:39:00-04:00">
+<meta property="article:modified_time" content="2021-08-26T10:39:00-04:00">
+<meta name=description content="Create an SSH Key">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
+<link rel=stylesheet href=/css/layouts/single.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/>
+<img src=/images/home/main-logo_hua62c9ef28b919caa4cca4d9a1b90cd05_29918_42x0_resize_box_3.png alt=Logo>
+Nabeel Chowdhury</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+</ul>
+</div>
+</div>
+<img src=/images/home/main-logo_hua62c9ef28b919caa4cca4d9a1b90cd05_29918_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/home/inverted-logo_hu7cb0ce887dfdf4dc0ce8aab85583bfee_7384_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/search>
+<input type=text name=keyword placeholder=Search data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
+<div class=subtree>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/posts/coding/>Coding</a>
+<ul class=active>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/posts/coding/git-and-github/>Git and Github</a>
+<ul class=active>
+<li><a href=/posts/coding/git-and-github/why-use-git/ title="Why Use Git">Why Use Git</a></li>
+<li><a href=/posts/coding/git-and-github/setting-up-git/ title="Set Up Git">Set Up Git</a></li>
+<li><a class=active href=/posts/coding/git-and-github/create-ssh.key/ title="Create an SSH Key">Create an SSH Key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class=content>
+<div class="container p-0 read-area">
+<div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://nabizzle.github.io/posts/coding/git-and-github/create-ssh.key/SSH.svg)>
+</div>
+<div class=page-content>
+<div class="author-profile ml-auto align-self-lg-center">
+<img class=rounded-circle src=/images/author/Nabeel_hu1af93caabd39a9120d5f2a87d3b1f53e_122345_120x120_fit_q75_box.jpg alt="Author Image">
+<h5 class=author-name>Nabeel Chowdhury</h5>
+<p>August 26, 2021</p>
+</div>
+<div class=title>
+<h1>Create an SSH Key</h1>
+</div>
+<div class=post-content id=post-content>
+<h3 id=why-use-an-ssh-key>Why Use an SSH Key?</h3>
+<p>Without an SSH key, you have to log in and enter a password each time you push changes to GitHub. An SSH key allows you to use a password that you can add to your ssh environment that you only need to enter once when you open the terminal. An SSH key creates a private key on your computer that encripts your commits that are pushed to an online repository. Your account on the online repository has a public key generated from your private key that decrypts your pushed changes. You can also use the same ssh key for different repository sites. You should note that an SSH key does not verify your commits, for this, we will add a GPG key in the next post.</p>
+<p>Instructions for creating and adding an SSH key were found <a href=https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>here</a>.</p>
+<h3 id=create-an-ssh-key>Create an SSH Key</h3>
+<ol>
+<li>
+<p>Type the following into your terminal: <code>ssh-keygen -t rsa -b 4096 -C your_email@example.com</code> replacing the email with your own.</p>
+<ol>
+<li>This generates a private key that stays on your computer and a public key to save in your remote repositories like GitHub or Bitbucket.</li>
+</ol>
+</li>
+<li>
+<p>Wait for the ssh key to be generated.</p>
+</li>
+<li>
+<p>When the message asks where to save the key, press enter for the default location. This will make a .ssh folder in your home location. For windows, this is under your C drive under Users and in the folder for your profile name on the computer.</p>
+</li>
+<li>
+<p>Enter a password for your SSH key. Reenter the password to confirm it.</p>
+</li>
+<li>
+<p>Start an ssh-agent with the following command: <code>eval $(ssh-agent -s)</code></p>
+</li>
+<li>
+<p>Add the SSH key to your ssh-agent using the following command: <code>ssh-add ~/.ssh/id_rsa</code></p>
+</li>
+<li>
+<p>These two commands will need to be run every time you open a new terminal to add the ssh key, but we will add an ssh alias at the end of this post to enter both for you.</p>
+</li>
+</ol>
+<h3 id=add-your-ssh-public-key-to-github>Add Your SSH Public Key to GitHub</h3>
+<ol>
+<li>
+<p>Type the following into your terminal to copy the public key you generated to your clipboard: <code>clip &lt; ~/.ssh/id_rsa.pub</code></p>
+</li>
+<li>
+<p>Go to settings in GitHub and find the SSH and GPG keys option</p>
+</li>
+<li>
+<p>Go to &ldquo;Add a new SSH key&rdquo;</p>
+</li>
+<li>
+<p>Paste your public key into the new key field and make sure to name it.</p>
+</li>
+<li>
+<p>You may be prompted to reenter your GitHub password to save the SSH key.</p>
+</li>
+<li>
+<p>These instructions are common to most online repositories so you can add the same public key to multiple online repository hosting sites.</p>
+</li>
+</ol>
+<h3 id=check-your-ssh-key-is-communicating-with-github>Check your SSH key is Communicating with GitHub</h3>
+<ol>
+<li>
+<p>Enter the following into your terminal: <code>ssh -T git@github.com</code></p>
+</li>
+<li>
+<p>If the terminal responds by outputting a welcome message with your username, the ssh key
+was set up correctly.</p>
+</li>
+<li>
+<p>You can also check other sites you have repositories with this ssh key by changing the website in
+the above command.</p>
+</li>
+</ol>
+<h3 id=setup-an-ssh-alias-for-adding-an-ssh-key>Setup an SSH Alias for Adding an SSH Key</h3>
+<p>Memorizing the correct commands to enter for starting an ssh-agent and entering your SSH key is doable, but annoying. You will also have to do this every time you start a new terminal if you don&rsquo;t want to have to enter you password for your SSH key every time you push changes. Follow the steps below to create a simple alias to enter both commands for you. These intructions were adapted from <a href=https://scotch.io/tutorials/how-to-create-an-ssh-shortcut>these</a> using method 2. For this example, we will also use vim as it is simpler to make this file.</p>
+<ol>
+<li>
+<p>Type <code>vim ~/.bash_aliases</code> into the terminal</p>
+<ol>
+<li>This creates a file called .bash_aliases in your home directory and allows you to write to it using vim. This is typically located in your profile&rsquo;s folder in the User directory of the C drive if you are using Windows.</li>
+</ol>
+</li>
+<li>
+<p>Press <code>i</code> to start editing.</p>
+<ol>
+<li>If you are unfamiliar with commands in vim, refer to this <a href=https://vim.rtorr.com/>guide</a>. I will list what you need to type as we go.</li>
+</ol>
+</li>
+<li>
+<p>Create an alias in the .bash_aliases file by typing <code>alias connect='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'</code></p>
+</li>
+<li>
+<p>It is important that the spacing is exactly as I have typed it here.</p>
+</li>
+<li>
+<p>This creates an alias that enters both commands to start an ssh-agent and add the SSH key to the agent when you type <code>connect</code> into the terminal.</p>
+</li>
+<li>
+<p>When creating additional aliases, any commands you want to do need to be in single quotes and if you want to do multiple at the same time, remember to put && between them.</p>
+</li>
+<li>
+<p>Save the file by hitting escape and typing <code>:wq</code> and hitting enter. This command is to write (w) the changes to the file and quit (q) or close the file. The colon is to tell vim you are entering code to write and quit.</p>
+</li>
+<li>
+<p>To tell the terminal that this alias exists, enter <code>source ~/.bash_aliases</code>. This pulls the .bash_aliases file from your home directory (~).</p>
+<ol>
+<li>You will need to do this step each time you start a new terminal.</li>
+<li>Typically, you can also use the tab key to auto fill the command with .bash_aliases after typing the first part of the file name. The tab key can auto fill most commands.</li>
+</ol>
+</li>
+<li>
+<p>Now type <code>connect</code> or whatever you named the alias to see if it worked. It should ask for you ssh key password</p>
+<ol>
+<li>You will no longer need to enter the password until you reopen the terminal.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class=btn-improve-page>
+<a href=https://github.com/Nabizzle/Nabizzle.github.io/edit//content/posts/coding/git-and-github/create-ssh.key/index.md title="Improve this page" target=_blank rel=noopener>
+<i class="fas fa-code-branch"></i>
+Improve this page
+</a>
+</div>
+<hr>
+<div class="row next-prev-navigator">
+<div class="col-md-6 previous-article">
+<a href=/posts/coding/git-and-github/setting-up-git/ title="Setting Up Git" class="btn btn-outline-info">
+<div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+<div class=next-prev-text>Setting Up Git</div>
+</a>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a>
+</section>
+<section class=toc-section id=toc-section>
+<div class=toc-holder>
+<h5 class="text-center pl-3">Table of Contents</h5>
+<hr>
+<div class=toc>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#why-use-an-ssh-key>Why Use an SSH Key?</a></li>
+<li><a href=#create-an-ssh-key>Create an SSH Key</a></li>
+<li><a href=#add-your-ssh-public-key-to-github>Add Your SSH Public Key to GitHub</a></li>
+<li><a href=#check-your-ssh-key-is-communicating-with-github>Check your SSH key is Communicating with GitHub</a></li>
+<li><a href=#setup-an-ssh-alias-for-adding-an-ssh-key>Setup an SSH Alias for Adding an SSH Key</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+</div>
+<footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+<ul>
+<li class=nav-item>
+<a class=smooth-scroll href=/#about>About</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#skills>Skills</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#experiences>Experiences</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#education>Education</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#projects>Projects</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#recent-posts>Recent Posts</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><span>Email: </span> <span>nblchowdhury@gmail.com</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2021 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
