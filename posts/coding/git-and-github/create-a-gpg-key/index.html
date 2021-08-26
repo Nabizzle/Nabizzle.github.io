@@ -1,0 +1,328 @@
+<!doctype html><html>
+<head>
+<title>Create a GPG Key</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
+<link rel=icon type=image/png href=/images/home/favicon.svg>
+<meta property="og:title" content="Create a GPG Key">
+<meta property="og:description" content="Why Use a GPG Key? The SSH key we made in the previous post was meant to encript your code changes between your local repositories and your remote repositories. A GPG key is similar in that it encrypts and signs your commits in your local repository so that your remote repository can verify that the commits were made by a trusted individual. Like the SSH key, you will have to generate a private and public key and add the public key to your remote repository hosting site of choice.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nabizzle.github.io/posts/coding/git-and-github/create-a-gpg-key/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-08-26T11:55:06-04:00">
+<meta property="article:modified_time" content="2021-08-26T11:55:06-04:00">
+<meta name=description content="Create a GPG Key">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
+<link rel=stylesheet href=/css/layouts/single.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/>
+<img src=/images/home/main-logo_hua62c9ef28b919caa4cca4d9a1b90cd05_29918_42x0_resize_box_3.png alt=Logo>
+Nabeel Chowdhury</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+</ul>
+</div>
+</div>
+<img src=/images/home/main-logo_hua62c9ef28b919caa4cca4d9a1b90cd05_29918_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/home/inverted-logo_hu7cb0ce887dfdf4dc0ce8aab85583bfee_7384_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/search>
+<input type=text name=keyword placeholder=Search data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
+<div class=subtree>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/posts/coding/>Coding</a>
+<ul class=active>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/posts/coding/git-and-github/>Getting Started with Git</a>
+<ul class=active>
+<li><a href=/posts/coding/git-and-github/why-use-git/ title="Why Use Git">Why Use Git</a></li>
+<li><a href=/posts/coding/git-and-github/setting-up-git/ title="Set Up Git">Set Up Git</a></li>
+<li><a href=/posts/coding/git-and-github/create-ssh.key/ title="Create an SSH Key">Create an SSH Key</a></li>
+<li><a class=active href=/posts/coding/git-and-github/create-a-gpg-key/ title="Create a GPG Key">Create a GPG Key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class=content>
+<div class="container p-0 read-area">
+<div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://nabizzle.github.io/posts/coding/git-and-github/create-a-gpg-key/GnuPG-logo.svg)>
+</div>
+<div class=page-content>
+<div class="author-profile ml-auto align-self-lg-center">
+<img class=rounded-circle src=/images/author/Nabeel_hu1af93caabd39a9120d5f2a87d3b1f53e_122345_120x120_fit_q75_box.jpg alt="Author Image">
+<h5 class=author-name>Nabeel Chowdhury</h5>
+<p>August 26, 2021</p>
+</div>
+<div class=title>
+<h1>Create a GPG Key</h1>
+</div>
+<div class=post-content id=post-content>
+<h3 id=why-use-a-gpg-key>Why Use a GPG Key?</h3>
+<p>The SSH key we made in the previous post was meant to encript your code changes between your local repositories and your remote repositories. A GPG key is similar in that it encrypts and signs your commits in your local repository so that your remote repository can verify that the commits were made by a trusted individual. Like the SSH key, you will have to generate a private and public key and add the public key to your remote repository hosting site of choice. This tutorial will focus on GitHub, but the same intructions will easily translate to other sites. This tutorial is based on those found <a href=https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/about-commit-signature-verification>here</a>.</p>
+<h3 id=generate-a-new-gpg-key>Generate a new GPG Key</h3>
+<ol>
+<li>
+<p>Download the GPG key command line tools from <a href=https://www.gnupg.org/download/>here</a>.</p>
+<ol>
+<li>pick the correct download for your operating system.</li>
+<li>For my Windows system, I picked the simple installer for GnuPG as I don&rsquo;t need the full featured version for what I want to do.</li>
+</ol>
+</li>
+<li>
+<p>Open Git Bash or whichever terminal you prefer using</p>
+</li>
+<li>
+<p>Create your GPG key by entering the following command:</p>
+<ol>
+<li>If you have a version of git of 2.1.17 or later, enter <code>gpg --full-generate-key</code></li>
+<li>If you are not on version 2.1.17 or later, use <code>gpg --default-new-key-algo rsa4096 --gen-key</code> and skip to step 6.</li>
+</ol>
+</li>
+<li>
+<p>Press Enter for the defult key type. We are making an RSA key for this tutorial</p>
+</li>
+<li>
+<p>Enter <code>4096</code> for the key size and hit enter</p>
+</li>
+<li>
+<p>For the length of time, hit enter if you want to accept the default expiration date of never or select the time frame from the options shown.</p>
+</li>
+<li>
+<p>Enter your full name that you want to be associated with your key.</p>
+</li>
+<li>
+<p>Enter your commit email. If you have set your email to private on GitHub or you don&rsquo;t want people to know your email, use the no reply email provided to you on GitHub under the email settings.</p>
+<ol>
+<li>You need to make sure that this email matches the email you set in your config file when you set up git.</li>
+</ol>
+</li>
+<li>
+<p>You can add a comment to label what this key is for.</p>
+</li>
+<li>
+<p>Create a password and confirm it.</p>
+</li>
+<li>
+<p>Type <code>gpg --list-secret-keys --keyid-format=long</code> to list your gpg key.</p>
+</li>
+<li>
+<p>Copy the long form of the key from the sec: section of the output key. This is after the section that lists your key length (4096) and before the expiration date. In the below example this is <code>3AA5C34371567BD2</code></p>
+</li>
+</ol>
+<pre><code>$ gpg --list-secret-keys --keyid-format=long
+/Users/hubot/.gnupg/secring.gpg
+------------------------------------
+sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+uid                          Hubot
+ssb   4096R/42B317FD4BA89E7A 2016-03-10
+</code></pre><ol start=13>
+<li>
+<p>Type <code>gpg --armor --export 3AA5C34371567BD2</code> replacing <code>3AA5C34371567BD2</code> with your key.</p>
+</li>
+<li>
+<p>Copy the output key from <code>-----BEGIN PGP PUBLIC KEY BLOCK-----</code> to <code>-----END PGP PUBLIC KEY BLOCK-----</code>.</p>
+</li>
+</ol>
+<h3 id=add-your-gpg-key-to-github>Add Your GPG Key to GitHub</h3>
+<p>We will add the GPG key in the same way as we added our SSH key.</p>
+<ol>
+<li>
+<p>Go to settings in GitHub and find the SSH and GPG keys option</p>
+</li>
+<li>
+<p>Click on to &ldquo;New GPG key&rdquo;</p>
+</li>
+<li>
+<p>Paste your public key into the new key field.</p>
+</li>
+<li>
+<p>You may be prompted to reenter your GitHub password to save the GPG key.</p>
+</li>
+</ol>
+<h3 id=add-your-gpg-key-to-git>Add your GPG key to Git</h3>
+<ol>
+<li>
+<p>In the terminal copy your key&rsquo;s long form again. For this example, I will use <code>3AA5C34371567BD2</code>.</p>
+</li>
+<li>
+<p>Enter the following replacing my key with yours: <code>git config --global user.signingkey 3AA5C34371567BD2</code></p>
+</li>
+</ol>
+<h3 id=signing-commits>Signing commits</h3>
+<ol>
+<li>
+<p>If you want git to sign all commits in a specific repsitory, enter <code>git config commit.gpgsign true</code>into Git Bash. If you only want to sign in all repositories on the computer, enter <code>git config --global commit.gpgsign true</code> into Git Bash.</p>
+<ol>
+<li>Note that this only works in git versions 2.0.0 and above.</li>
+</ol>
+</li>
+<li>
+<p>If you want to sign a specific commit, add the <code>-S</code> flag to the call to commit.</p>
+<ol>
+<li>ex: <code>git commit -S</code></li>
+</ol>
+</li>
+<li>
+<p>Once you commit changes, you will be prompted to input your password for your GPG key.</p>
+<ol>
+<li>If you want to store your GPG key, mac users can use <a href=https://gpgtools.org/>GPG Suite</a> and Windows users can use <a href=https://www.gpg4win.org/>Gpg4win</a>. Alternatively, you can use a gpg-agent, but this does not work as well on macs.</li>
+</ol>
+</li>
+</ol>
+<h3 id=signing-tags>Signing Tags</h3>
+<ol>
+<li>
+<p>Add a <code>-s</code> flag to the tag</p>
+<ol>
+<li>ex: <code>git tag -s v1.0.0</code></li>
+<li>Note that this is a lower case s for tags and an uppercase S for commits.</li>
+</ol>
+</li>
+<li>
+<p>verify a tag&rsquo;s signature using the <code>-v</code> flag.</p>
+<ol>
+<li>ex: <code>git tag -v v1.0.0</code></li>
+</ol>
+</li>
+</ol>
+</div>
+<div class=btn-improve-page>
+<a href=https://github.com/Nabizzle/Nabizzle.github.io/edit//content/posts/coding/git-and-github/create-a-gpg-key/index.md title="Improve this page" target=_blank rel=noopener>
+<i class="fas fa-code-branch"></i>
+Improve this page
+</a>
+</div>
+<hr>
+<div class="row next-prev-navigator">
+<div class="col-md-6 previous-article">
+<a href=/posts/coding/git-and-github/create-ssh.key/ title="Create an SSH Key" class="btn btn-outline-info">
+<div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+<div class=next-prev-text>Create an SSH Key</div>
+</a>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a>
+</section>
+<section class=toc-section id=toc-section>
+<div class=toc-holder>
+<h5 class="text-center pl-3">Table of Contents</h5>
+<hr>
+<div class=toc>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#why-use-a-gpg-key>Why Use a GPG Key?</a></li>
+<li><a href=#generate-a-new-gpg-key>Generate a new GPG Key</a></li>
+<li><a href=#add-your-gpg-key-to-github>Add Your GPG Key to GitHub</a></li>
+<li><a href=#add-your-gpg-key-to-git>Add your GPG key to Git</a></li>
+<li><a href=#signing-commits>Signing commits</a></li>
+<li><a href=#signing-tags>Signing Tags</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+</div>
+<footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+<ul>
+<li class=nav-item>
+<a class=smooth-scroll href=/#about>About</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#skills>Skills</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#experiences>Experiences</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#education>Education</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#projects>Projects</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#recent-posts>Recent Posts</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><span>Email: </span> <span>nblchowdhury@gmail.com</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2021 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
