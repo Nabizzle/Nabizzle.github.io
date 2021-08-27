@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: Why Use Git
     identifier: why-use-git
-    parent: git-and-github
+    parent: getting-started-with-git
     weight: 1
 ---
 ### Who Uses Git?

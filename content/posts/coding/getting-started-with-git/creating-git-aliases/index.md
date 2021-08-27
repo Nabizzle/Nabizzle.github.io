@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: Creating Git Aliases
     identifier: creating-git-aliases
-    parent: git-and-github
+    parent: getting-started-with-git
     weight: 5
 ---
 

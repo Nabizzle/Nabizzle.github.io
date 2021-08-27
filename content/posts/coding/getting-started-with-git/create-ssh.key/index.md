@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: Create an SSH Key
     identifier: create-ssh-key
-    parent: git-and-github
+    parent: getting-started-with-git
     weight: 3
 ---
 ### Why Use an SSH Key?
