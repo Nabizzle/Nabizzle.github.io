@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: Create a GPG Key
     identifier: create-a-gpg-key
-    parent: git-and-github
+    parent: getting-started-with-git
     weight: 4
 ---
 ### Why Use a GPG Key?

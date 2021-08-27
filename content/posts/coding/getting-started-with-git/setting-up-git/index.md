@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: Set Up Git
     identifier: setting-up-git
-    parent: git-and-github
+    parent: getting-started-with-git
     weight: 2
 ---
 This tutorial is based heavily on the one from [GitHub](https://docs.github.com/en/github/getting-started-with-github/set-up-git#setting-up-git)
