@@ -22,6 +22,15 @@ buttons:
 # your projects
 projects:
 - name: Tensorflow
+  logo: /images/sections/projects/hexapod.png
+  role: Robotics Engineer
+  timeline: "August 2021 - January 2022"
+  repo: https://github.com/Nabizzle/Hexapod
+  #url: ""
+  summary: Created a custom walking hexapod robot interfaced either from a phone or from EMG signals to control up to 18 degrees of freedom with custom inverse kinematics calculations.
+  tags: ["professional", "hobby"]
+
+- name: Tensorflow
   logo: /images/sections/projects/tensorflow.png
   role: Developer
   timeline: "July 2021 - Present"

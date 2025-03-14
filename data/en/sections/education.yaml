@@ -12,7 +12,7 @@ section:
 degrees:
 - name: Ph.D in Biomedical Engineering
   icon: fa-microscope
-  timeframe: 2017-Present
+  timeframe: 2017-2024
   institution:
     name: Case Western Reserve University
     url: "https://case.edu/"
@@ -21,8 +21,10 @@ degrees:
     achieved: 4.0
     outOf: 4.0
   publications: #(optional)
-  - title: The Utilzation of Peripheral Nerve Feedback at a Preconscious Level (In Progress)
-    url: "https://osf.io/vq5sh/"
+  - title: Utilization of peripheral nerve feedback at a preconscious level
+    url: "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2024.1336431/full"
+  - title: Direct Prosthesis Force Control with Tactile Feedback May Connect with the Internal Model
+    url: "https://www.medrxiv.org/content/10.1101/2024.12.05.24318338v2"
   takenCourses: #(optional)
     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
     showGrades: false
@@ -46,10 +48,6 @@ degrees:
   institution:
     name: Washington University in St. Louis
     url: "https://wustl.edu/"
-  grade: #(optional)
-    scale: GPA
-    achieved: 3.5
-    outOf: 4
   publications: #(optional)
   - title: Evaluation of absorbable mesh fixation devices at various deployment angles
     url: "https://link.springer.com/article/10.1007/s00464-014-3850-x"

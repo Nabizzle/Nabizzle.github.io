@@ -8,17 +8,17 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Fifth Year Neuroengineering PhD Student in the Tyler Lab
+designation: PhD in Neuroengineering and Cognitive Neuroscience
 # your company information
 company:
   name: Case Western Reserve University
   url: "https://engineering.case.edu/ebme/tyler"
 
 # your resume. this file path should be relative to you "static" directory
-resume: "files/resume.pdf"
+resume: "files/Nabeel Chowdhury Resume 2025.pdf"
 
 # a summary about you
-summary: 'My work has to do with understanding how the tactile sensations created by stimulating the peripheral nerves integrate with the motor system. I am investigating how these artificial tactile sensations are processed by the brain at an intuitive level and how this subconscious processing augments the motor plan that is created when controlling our hands. Currently this is studied through the use of upper limb prostheses, but the applications of this research should help us understand how tactile feedback is used for able bodied individuals as well. The overall goal of my research is to close the disconnect that exists between our understanding of how tactile feedback is felt and how our motor commands descending from our brain are used.'
+summary: 'Innovative Neuroengineering Researcher with a decade of experience in cognitive neuroscience, specializing in sensorimotor integration and neural implants. Developed a pioneering metric for touch perception evaluation through advanced machine learning and data analysis, with research featured in major media outlets. Seeking opportunities to advance neuroengineering innovations utilizing skills in research design, statistical modeling, and AI for groundbreaking applications.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -35,13 +35,9 @@ socialLinks:
   icon: "fab fa-linkedin"
   url: "https://www.linkedin.com/in/nabeel-chowdhury-2a13108a/"
 
-- name: Twitter
-  icon: "fab fa-twitter"
-  url: "https://twitter.com/NabizzleC"
-
-- name: Facebook
-  icon: "fab fa-facebook"
-  url: "https://www.facebook.com/NabizzleC/"
+- name: Bluesky
+  icon: "fab fa-bluesky"
+  url: "https://bsky.app/profile/nabizzle.bsky.social"
 
 # Show your badges
 # You can show your verifiable certificates from https://www.credly.com.
@@ -50,22 +46,22 @@ badges:
 - type: certification
   name: Data Science Foundations - Level 2 (V2)
   url: "https://www.credly.com/badges/7ec06df5-0e41-44cd-84b3-a9afda728780/public_url"
-  badge: "https://images.credly.com/size/340x340/images/d7321425-c989-4bf9-846a-cd2a647d213b/Data_Sci_Foundations_Level_2_-_CC_-_2019.png"
+  badge: "https://images.credly.com/size/340x340/images/2fde0bfe-ca31-4e31-860b-a109eeb86c05/blob"
 
 - type: certification
   name: Applied Data Science with Python - Level 2
   url: "https://www.credly.com/badges/9a7875be-7cae-4194-9553-cc74a30766e9/public_url"
-  badge: "https://images.credly.com/size/340x340/images/73ac7b07-679c-4c0e-94d9-8b9dc11efe59/Applied_Data_Science_with_Python.png"
+  badge: "https://images.credly.com/size/340x340/images/90b92982-adc0-4826-afeb-455be8609899/blob"
 
 - type: certification
   name: Deep Learning
   url: "https://www.credly.com/badges/2aafad2b-e540-4596-abfa-ab4379881639/public_url"
-  badge: "https://images.credly.com/size/340x340/images/747c6cdd-e728-446a-8e32-bbfb58fc04c7/Deep_Learning_-_Knowledge_2_Stars.png"
+  badge: "https://images.credly.com/size/340x340/images/19df5d04-16a5-4c4f-8ea1-1ed5512013f4/blob"
 
 - type: certification
   name: R Essentials
   url: "https://www.credly.com/badges/e893a846-e2f9-4a95-90ff-549a79cc2d27/public_url"
-  badge: "https://images.credly.com/size/340x340/images/d2cc88b1-1f59-41d2-9f1c-83190e3541e1/R_Essentials.png"
+  badge: "https://images.credly.com/size/340x340/images/14a1c1e0-f580-4034-a910-a33043d6af12/blob"
 
 - type: soft-skill-indicator
   name: Neural Interfaces

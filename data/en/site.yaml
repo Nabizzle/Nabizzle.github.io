@@ -1,9 +1,9 @@
 # Copyright Notice
-copyright: © 2021 Copyright.
+copyright: © 2025 Copyright.
 
 # Meta description for your site.  This will help the search engines to find your site.
 description: Portfolio of Nabeel Chowdhury.
 
 customMenus:
-- name: Tyler Lab
-  url: https://engineering.case.edu/ebme/tyler
+- name: Follow me on Github
+  url: https://github.com/Nabizzle

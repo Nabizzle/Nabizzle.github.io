@@ -12,6 +12,11 @@ section:
 # Give a summary of you each skill in the summary section.
 skills:
 
+- name: Neural Stimulation and Recording
+  logo: /images/sections/skills/neurons.png
+  summary: "Nearly a decade of experience in neural stimualation, recording, and analysis in context of sensory connections to the motor system."
+  url: "https://git-scm.com/"
+
 - name: Git
   logo: /images/sections/skills/git.png
   summary: "Experienced with git-based development. Mostly, use Github and Bitbucket. Experienced in managing a small team's version control."
@@ -24,6 +29,14 @@ skills:
 - name: Python
   logo: /images/sections/skills/python.png
   summary: "Have intermediate python skills of data analysis and machine learning."
+
+- name: SciKit-Learn
+  logo: /images/sections/skills/sklearn.png
+  summary: "Skilled in the creation of models as simple as linear/logistic regression to complex models like random forests and other ensemble modeling techniques."
+
+- name: TensorFlow
+  logo: /images/sections/projects/tensorflow.png
+  summary: "Skilled in the creation of deep learning models."
 
 - name: Matlab
   logo: /images/sections/skills/matlab.jpg

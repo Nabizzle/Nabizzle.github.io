@@ -15,20 +15,21 @@ experiences:
     url: "https://engineering.case.edu/ebme/tyler"
     location: Cleveland, Ohio
     # company overview
-    overview: CWRU has arguably the best neuroengineering department in the country and a world class faculty at the cutting edge of the neuro technology space.
+    overview: CWRU has the best neuroengineering department in the country and a world class faculty at the cutting edge of the neuro technology space.
   positions:
   - designation: Neuroengineering PhD Student
     start: Aug 2017
+    end: Oct 2025
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Investigate how artificial stimulation of the peripheral nervous system integrates with the motor control system of amputees
-    - Senior graduate student of the Tyler lab.
-    - Manage code version control of the lab.
-    - Mentor incoming PhD students
-    - Present at CWRU and at academic conferences
-    - Work with and manage Human subjects with neural implants.
+    - Executed comprehensive study on touch perception and motor functions, employing implanted nerve cuff electrodes and data collection from 5 human participants.
+    - Innovated a new metric for evaluating touch perception and migration by integrating machine learning models and conducting complex cluster analysis on a robust dataset collected over 12 years from a cohort of 5 participants.
+    - Guided a group of 3 to 7 PhD candidates in formalizing research hypotheses and protocols, ensuring the integrity of theoretical foundations.
+    - Research featured in 60 Minutes, National Geographic, and PBS.
+    - Programmed custom hardware using Python to communicate between devices, MATLAB to program a neural stimulator, and C++ to minimize race conditions.
+    - Managed the in-lab experiments for 5 participants, planned the implant surgery for one participant with a team of clinicians, and assisted in the implant of another 5 participants of various neural stimulation studies.
 
 - company:
     name: Shirley Ryan Ability Lab (Center for Bionic Medicine)
@@ -36,14 +37,15 @@ experiences:
     location: Chicago, Illinois
     overview: The Shirley Ryan Ability lab is the number one rehab hospital in the country and Todd Kuiken of the Center for Bionic Medicine pioneered Targeted Muscle Reinnervation, a technique that revolutionized prosthesis control.
   positions:
-  - designation: Research Assistant
+  - designation: Biomedical Engineer I
     start: Jun 2016
-    end: Aug 2017
+    end: Jul 2017
     responsibilities:
-    - Work with a multidisplinary team of engineers
-    - Construct cabling and equipment for experiments
-    - Work with transtibial amputees developing better EMG controllers.
-    - Help PhD students with thier experiments
+    - Programmed an embedded pattern recognition controller of 3 different liner-based EMG interfaces using C as part of a contract with a major prosthesis company which released to the market in 2023.
+    - Tested the EMG interface with 3 research participants on a monthly basis to analyze the accuracy of the pattern recognition controller.
+    - Created custom electrode harnesses to record EMG locally over muscles on 3 different research participants.
+    - Programmed a computer vision system to track research participants separately from researchers in a waking test to automatically trigger walking state changes of an experimental leg prosthesis.
+    - Collaborated with a multidisciplinary team of electrical, mechanical, biomedical, and software engineers.
 
 - company:
     name: Freelance 3D Modeler
@@ -55,10 +57,9 @@ experiences:
     start: Jun 2016
     end: Aug 2017
     responsibilities:
-    - Creation of requested 3D models
-    - 3D sculpting
-    - Creation of 3D printable files
-    - Worked with clients to achieve their desired results
+    - Received contracts to create 3D designs ranging from mechanical assemblies to video game characters, with as many as 3 contracts simultaneously.
+    - Rapidly adapted to changes in design requests on a 1-2 hour cycle between requests.
+    - Managed client relationships across multiple design contracts to maintain a 5 star rating
 
 - company:
     name: Washington University in St. Louis School of Medicine
@@ -66,12 +67,12 @@ experiences:
     location: St. Louis, Missouri
     overview: The Washington University in St. Louis School of Medicine is one of the best medical schools in the country and undergraduate BME program where I earned my BS world class.
   positions:
-  - designation: Research Assistant
+  - designation: Undergraduate Research Assistant
     start: Sept 2012
     end: May 2016
     responsibilities:
-    - Creation of electrospun hernia meshes
-    - Design of 3D printable surgical planning devices from MRI and CT scans
-    - Repair of digital craniofacial models
-    - 3D modeler for a startup 3D printing core
-    - Design of 3D printable prostheses
+    - Utilized imaging software to process CT scans, assisting in preoperative assessments and implant development for craniofacial trauma and pediatric birth defects.
+    - Led 3D design for a newly formed 3D printing core at the Washington University School of Medicine.
+    - Created training models for tumor removal (later reported in the new) and hysterectomies as part of the 3D printing core.
+    - Delivered detailed, interactive seminars demonstrating integration of CAD software and artistic methodologies for bespoke prosthetic fabrication.
+    - Developed a method of using an MRI of a patient's abdominal wall to custom print a hernia mesh later presented at a conference.
