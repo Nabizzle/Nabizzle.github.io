@@ -21,9 +21,9 @@ buttons:
 
 # your projects
 projects:
-- name: Tensorflow
+- name: EMG Controlled 18 DoF Hexapod Robot
   logo: /images/sections/projects/hexapod.png
-  role: Robotics Engineer
+  role: Lead Robotics and Software Engineer
   timeline: "August 2021 - January 2022"
   repo: https://github.com/Nabizzle/Hexapod
   #url: ""
